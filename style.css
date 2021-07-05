@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background: #9b59b6;
+  left: 0;
+  bottom: 0;
+}
+
+.container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 12px 0 12px 0;
+  width: 80%;
+}
+
+.container form .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2-20px);
+}
+
+.user-details .input-box .details {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+}
+form .gender-info .gender-title,
+form .gender-info .plan-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .gender-info .category {
+  display: flex;
+  width: 25%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .plan-info .category {
+  display: flex;
+  width: 50%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .gender-info .category label,
+form .plan-info .category label {
+  display: flex;
+  align-items: center;
+}
+
+.gender-info .category .dot,
+.plan-info .category .dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#plandot-1:checked ~ .category label .one,
+#plandot-2:checked ~ .category label .two,
+#plandot-3:checked ~ .category label .three {
+  border-color: #d9d9d9;
+  background: #9b59b6;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .gender-info .category,
+  form .plan-info .category {
+    width: 100%;
+  }
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 350px;
+  height: 100%;
+  background: #4b0082;
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #4b0082;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1 px solid black;
+  transition: 0.4s;
+}
+
+ul li:hover a {
+  padding-left: 50px;
+}

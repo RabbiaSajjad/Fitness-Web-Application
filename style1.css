@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+}
+
+header {
+  background-image: url(./background1.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+  margin-top: 25px;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+  left: -30%;
+}
+
+ul li a {
+  text-decoration: none;
+  color: antiquewhite;
+  padding: 5px 20px;
+  border: 1px solid antiquewhite;
+  transition: 0.6s ease;
+}
+
+ul li a:hover {
+  background-color: antiquewhite;
+  color: #000;
+}
+
+body {
+  background-color: rgb(147, 112, 219);
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+}
+
+.table-body {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2 px;
+  table-layout: fixed;
+  background-color: #e9e9e9;
+  width: 800px;
+  height: 150px;
+  table-layout: fixed;
+  border: 2px;
+}
+
+.table-body tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-body td:nth-child(odd) {
+  background-color: indigo;
+  color: white;
+}
